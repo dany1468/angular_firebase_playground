@@ -4,7 +4,9 @@ import { provideFirestore, getFirestore, connectFirestoreEmulator } from '@angul
 import { provideFunctions, getFunctions, connectFunctionsEmulator } from '@angular/fire/functions';
 import { getAuth, provideAuth, connectAuthEmulator } from '@angular/fire/auth';
 import { getStorage, provideStorage, connectStorageEmulator } from '@angular/fire/storage';
+import { routes } from './app.routes';
 import { environment } from 'src/environments/environment';
+import { provideRouter } from '@angular/router';
 
 const provideFirebase = () => importProvidersFrom([
   provideFirebaseApp(() => initializeApp(environment.firebase)),
@@ -39,5 +41,5 @@ const provideFirebase = () => importProvidersFrom([
 ]);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideFirebase()]
+  providers: [provideFirebase(), provideRouter(routes)]
 };
