@@ -1,0 +1,6 @@
+version: '3'
+
+tasks:
+  emulator:up:
+    cmds:
+      - firebase emulators:start --import data --export-on-exit
