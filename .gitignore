@@ -46,6 +46,7 @@ data/
 database-debug.log
 firestore-debug.log
 ui-debug.log
+firebase-debug.log
 
 # environment
 src/environments/environment.*.ts
